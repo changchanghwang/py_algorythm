@@ -17,4 +17,4 @@ print(solution(s))
 
 def solution(s):
   s = s.lower()
-  return s.count('p') == s.count('y')
+  return s.count('p') == s.count('y') #문자열 내 있는 수 카운트
