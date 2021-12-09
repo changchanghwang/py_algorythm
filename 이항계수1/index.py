@@ -8,6 +8,12 @@ def factorial(a):
     result *= i
   return result
 
+# def fac(a):
+#   if a<2:
+#     return 1
+#   else:
+#     return a*fac(a-1)   
+
 print(factorial(n)//(factorial(n-k)*factorial(k)))
 
 ##이항계수 (nk) = n!/(n-k)!k!
