@@ -11,29 +11,29 @@ for _ in range(m):
   graph[v1].append(v2)
   graph[v2].append(v1)
 
-print(graph)
+for i in range(n+1):
+  graph[i].sort()
 
-def DFS(dic,start,visited):    
-  stack = [start]
-  while stack:
-    cur = stack.pop()
-    visited.append(cur)
-    for d in dic[cur]:
-      if d not in visited:
-        stack.append(d)
-  return visited
+def DFS(graph,v,visited):    
+  visited[v] = True
+  print(v, end= ' ')
+  for i in graph[v]:
+    if not visited[i]:
+      DFS(graph,i,visited)
 
-def BFS(dic,start,visited):
-  queue = deque([start])
+def BFS(graph,v,visited):
+  queue = deque([v])
+  visited[v] = True
   while queue:
     cur = queue.popleft()
-    visited.append(cur)
-    for d in dic[cur]:
-      if d not in visited:
-        queue.append(d)
-  return visited 
+    print(cur, end= ' ')
+    for i in graph[cur]:
+      if not visited[i]:
+        queue.append(i)
+        visited[i] = True
 
-visited = []
-print(DFS(graph,v,visited))
-visited = []
-print(BFS(graph,v,visited))
+visited = [False] * (n+1)
+DFS(graph,v,visited)
+print()
+visited = [False] * (n+1)
+BFS(graph,v,visited)
