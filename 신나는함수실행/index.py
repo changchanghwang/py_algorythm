@@ -1,6 +1,6 @@
 import sys
 
-def w(a,b,c):
+def w(a,b,c,d):
   if a <= 0 or b <= 0 or c <= 0:
     return 1
   if a > 20 or b > 20 or c > 20:
@@ -15,7 +15,7 @@ while True:
   d = [0]*101
   
   
-  print('w(%d, %d, %d) = %d' % (a,b,c,w(a,b,c)))
+  print('w(%d, %d, %d) = %d' % (a,b,c,w(a,b,c,d)))
   if a == -1 and b == -1 and c == -1:
     break
   
