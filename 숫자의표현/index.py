@@ -1,4 +1,4 @@
-n = 15
+n = 10
 
 def solution(n):
   answer = 0
