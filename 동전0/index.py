@@ -4,9 +4,10 @@ n, k = map(int, sys.stdin.readline().split())
 list = []
 for _ in range(n):
   coin = int(sys.stdin.readline())
-  if coin < k:
+  if coin <= k:
     list.append(coin)
 
+print(coin)
 count =0
 while k != 0:
   count += (k//list[-1])
